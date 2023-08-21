@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: webapp1
+  template:
+    metadata:
+      labels:
+        name: webapp1
+    spec:
+      containers:
+      - name: webapp1
+        image: qiuguobin/webapp1
+        imagePullPolicy: Always
+        ports:
