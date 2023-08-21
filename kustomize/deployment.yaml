@@ -16,4 +16,5 @@ spec:
       - name: webapp1
         image: qiuguobin/webapp1
         imagePullPolicy: Always
-        ports: 3000
+        ports: 
+        - containerPort: 3000
